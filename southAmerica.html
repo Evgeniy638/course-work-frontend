@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реки мира</title>
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="mobile_icon_menu">
+            <button class="mobile_icon_menu_button">
+                <span class="mobile_icon_menu_line top_line"></span>
+                <span class="mobile_icon_menu_line middle_line"></span>
+                <span class="mobile_icon_menu_line bottom_line"></span>
+            </button>
+        </div>
+        <ul class="header_menu">
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./eurasia.html">Реки Евразии</a></li>
+            <li><a href="./northAmerica.html">Реки Северной Америки</a></li>
+            <li><a class="active_link" href="#">Реки Южной Америки</a></li>
+            <li><a href="./africa.html">Реки Африки</a></li>
+            <li><a href="./australia.html">Реки Австралии</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="wrap_title">
+            <h1>Реки Южной Америки</h1>
+        </div>
+        
+        <canvas id="river_canvas"></canvas>
+
+        <div class="wrap rivers">
+            <div class="river pop_up_element">
+                <div class="river_title">
+                    <h2>Амазонка</h2>
+                </div>
+                <div class="river_images">
+                    <button class="river_images_arrow arrow_left"><img src="./img/arrow-left.svg" alt="стрелка влево"></button>
+                    <button class="river_images_arrow arrow_right"><img src="./img/arrow-right.svg" alt="стрелка вправо"></button>
+
+                    <div class="river_images_container">
+                        <img src="./img/rivers of south america/Rio_Amazonas_-_Parintins.jpg" alt="Амазонка">
+                        <img src="./img/rivers of south america/Kakaja-samaja-dlinnaja-na-svete-reka-1024x640.jpg" alt="Амазонка">
+                        <img src="./img/rivers of south america/amazonka.webp" alt="Амазонка">
+                    </div>
+                </div>
+                <div class="river_text">
+                    <p>
+                        Амазо́нка (исп. и порт. Amazonas) — самая полноводная река в мире, расположенная в Южной Америке. Образуется слиянием рек Мараньон и Укаяли. Длина Амазонки является в научном сообществе дискуссионным вопросом и по различным измерениям составляет: от истока реки Мараньон — около 6400 км[1], от истока реки Апачет — 6992 км, от истока Укаяли — около 7100 км. Амазонка со своим длиннейшим истоком претендует, вместе с Нилом, на статус самого длинного водотока в мире, а также является крупнейшей в мире рекой по площади бассейна и полноводности. Годовой сток реки составляет 6937,92 км³, то есть в сутки она выносит примерно 19 км³ воды.
+                    </p>
+                    <p>
+                        Площадь бассейна с учётом притока Токантинс — 7180 тыс. км². Это заметно превышает бассейн рек Уругвай и Парана вместе (4140 тыс. км²) и Конго (около 3700 тыс. км²).
+                    </p>
+                    <p>
+                        В 2011 году по результатам всемирного конкурса Амазонка признана одним из семи природных чудес мира.
+                    </p>
+                    <p>Большая часть бассейна Амазонки принадлежит Бразилии, юго-западные и западные районы — Боливии, Перу, Эквадору и Колумбии. Протекая большей частью по Амазонской низменности в субширотном направлении близ экватора, Амазонка впадает в Атлантический океан, образуя одну из самых больших в мире дельт (площадью свыше 100 тыс. км² и включающую один из самых больших в мире речных островов — Маражо).</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./scripts/river.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/storeSouthAmerica.js"></script>
+    <script src="./scripts/bubbles.js"></script>
+</body>
+</html>

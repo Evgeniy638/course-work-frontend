@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реки Мира</title>
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="mobile_icon_menu">
+            <button class="mobile_icon_menu_button">
+                <span class="mobile_icon_menu_line top_line"></span>
+                <span class="mobile_icon_menu_line middle_line"></span>
+                <span class="mobile_icon_menu_line bottom_line"></span>
+            </button>
+        </div>
+        <ul class="header_menu">
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./eurasia.html">Реки Евразии</a></li>
+            <li><a href="./northAmerica.html">Реки Северной Америки</a></li>
+            <li><a href="./southAmerica.html">Реки Южной Америки</a></li>
+            <li><a href="./africa.html">Реки Африки</a></li>
+            <li><a class="active_link" href="#">Реки Австралии</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="wrap_title">
+            <h1>Реки Австралии</h1>
+        </div>
+        
+        <canvas id="river_canvas"></canvas>
+
+        <div class="wrap rivers">
+            <div class="river pop_up_element">
+                <div class="river_title">
+                    <h2>Муррей</h2>
+                </div>
+                <div class="river_images">
+                    <button class="river_images_arrow arrow_left"><img src="./img/arrow-left.svg" alt="стрелка влево"></button>
+                    <button class="river_images_arrow arrow_right"><img src="./img/arrow-right.svg" alt="стрелка вправо"></button>
+
+                    <div class="river_images_container">
+                        <img src="./img/rivers australia/murray1.jpg" alt="Муррей">
+                    </div>
+                </div>
+                <div class="river_text">
+                    <p>
+                        Му́ррей (Ма́рри; англ. Murray) — крупнейшая река в Австралии, формирующая, вместе с самым длинным своим притоком Дарлинг, крупнейшую речную систему страны площадью более 1 000 000 км² (около 12 % всего континента). Длина реки — 2508 км.
+                    </p>
+                    <p>
+                        Берёт начало в Австралийских Альпах. По реке проходит большая часть границы между штатами Виктория и Новый Южный Уэльс. Муррей маловоден, многие его притоки пересыхают и разбираются на орошение: из 14 км³ годового стока забирается более 11 км³ (80 %). Большинство забранной воды (до 95 %) расходуется на орошение прилегающих территорий, дающих до 40 % всей сельскохозяйственной продукции Австралии. Река впадает в Большой Австралийский залив Индийского океана.
+                    </p>
+                    <p>
+                        В прошлом река неоднократно меняла русло: её крупная древняя дельта и сейчас видна на карте в районе Аделаиды, где также было много древних пресных озёр. Впоследствии использовалась для прохода небольших судов, пока падение уровня вследствие ирригации не воспрепятствовало этому.
+                    </p>
+                    <p>
+                        Акклиматизация новых видов — кроликов и карпов, — имела негативные последствия и привела к сильной эрозии почвы. Кролики уничтожили растительность по берегам реки, а карпы разрыхлили грунт русла, препятствуя таким образом росту водорослей.
+                    </p>
+                    <p>
+                        Главные притоки: Дарлинг (самый длинный), Маррамбиджи (самый многоводный), Локлан, Голборн, Кампаспе, Лоддон, Митта-Митта.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./scripts/river.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/storeAfrica.js"></script>
+    <script src="./scripts/bubbles.js"></script>
+</body>
+</html>

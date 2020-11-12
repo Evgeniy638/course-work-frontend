@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реки мира</title>
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="mobile_icon_menu">
+            <button class="mobile_icon_menu_button">
+                <span class="mobile_icon_menu_line top_line"></span>
+                <span class="mobile_icon_menu_line middle_line"></span>
+                <span class="mobile_icon_menu_line bottom_line"></span>
+            </button>
+        </div>
+        <ul class="header_menu">
+            <li><a href="./index.html">Главная</a></li>
+            <li><a class="active_link" href="#">Реки Евразии</a></li>
+            <li><a href="./northAmerica.html">Реки Северной Америки</a></li>
+            <li><a href="./southAmerica.html">Реки Южной Америки</a></li>
+            <li><a href="./africa.html">Реки Африки</a></li>
+            <li><a href="./australia.html">Реки Австралии</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="wrap_title">
+            <h1>Реки Евразии</h1>
+        </div>
+        
+        <canvas id="river_canvas"></canvas>
+
+        <div class="wrap rivers">
+            <div class="river pop_up_element">
+                <div class="river_title">
+                    <h2>Аму-Дарья</h2>
+                </div>
+                <div class="river_images">
+                    <button class="river_images_arrow arrow_left"><img src="./img/arrow-left.svg" alt="стрелка влево"></button>
+                    <button class="river_images_arrow arrow_right"><img src="./img/arrow-right.svg" alt="стрелка вправо"></button>
+
+                    <div class="river_images_container">
+                        <img src="./img/rives of evrasia/Amu_darya.jpg" alt="Аму-Дарья">
+                        <img src="./img/rives of evrasia/Amu_darya_delta.jpg" alt="Аму-Дарья">
+                    </div>
+                </div>
+                <div class="river_text">
+                    <p>
+                        Амударья (устар. Аму-Дарья) — вторая по длине и крупнейшая по полноводности река в Средней Азии.
+                    </p>
+                    <p>
+                        Длина 1415 км (2620 км — от истока Пянджа с рекой Вахандарья). Площадь бассейна (выше города Керки, 1045 км от устья) 309 тысяч км² (без бассейнов рек Зеравшан и Кашкадарья, сток которых практически не поступает в Амударью), сток воды осуществляется с 227 тыс. км².
+                    </p>
+                    <p>
+                        Образуется слиянием рек Пяндж и Вахш, впадает в Аральское море, образуя дельту. В среднем течении в Амударью впадают три крупных правых притока (Кафирниган, Сурхандарья, Шерабад) и один левый приток (Кундуз). Далее до бывшего Аральского моря она не получает ни одного притока.
+                    </p>
+                    <p>Питание реки в основном составляют талыеснеговые и ледниковые воды, поэтому максимальные расходы наблюдаются летом, а наименьшие — в январе — феврале. Протекая по равнине, от Керки до Нукуса, Амударья теряет большую часть своего стока на испарение, и орошение. По мутности Амударья занимает первое место в Центральной Азии и одно из первых мест в мире. Основной сток Амударьи формируется на территории Таджикистана (80 %) и частично в Северном Афганистане. Затем река протекает вдоль границы Афганистана с Узбекистаном, пересекает Туркменистан и вновь возвращается в Узбекистан и впадает в Аральское море. В настоящее время воды реки не доходят до Аральского моря, так как забираются на орошение.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./scripts/river.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/storeEurasia.js"></script>
+    <script src="./scripts/bubbles.js"></script>
+</body>
+</html>

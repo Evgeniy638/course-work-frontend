@@ -1,0 +1,43 @@
+.clouds {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+}
+
+.clouds_cloud {
+    position: absolute;
+    background-repeat: repeat-x;
+    background-size: 50% 100%;
+    width: 200%;
+    min-width: 1500px;
+    height: 100%;
+    animation: scrollbackground 26s linear infinite;
+}
+
+.clouds_cloud1 {
+    background-image: url('./img/cloud1.png');
+    background-position-x: left;
+}
+
+.clouds_cloud2 {
+    background-image: url('./img/cloud2.png');
+    background-position-x: center;
+}
+
+.clouds_cloud3 {
+    background-image: url('./img/cloud3.png');
+    background-position-x: right;
+}
+
+@keyframes scrollbackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+

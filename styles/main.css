@@ -1,0 +1,179 @@
+main {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, white, rgb(248, 253, 171) 23%, rgb(199, 241, 143) 40%,
+        rgb(25, 165, 130) 40%, rgb(25, 102, 165) 66%, rgb(0, 7, 49)) no-repeat;
+    background-size: 100vw var(--height-linear-gradient);
+    background-color: rgb(0, 7, 49);
+    padding-bottom: 100px;
+}
+
+.wrap {
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.river {
+    margin-top: 50px;
+    min-height: calc(450px + 2rem);
+}
+
+.river_title {
+    color: white;
+    font-size: 2rem;
+}
+
+.rivers .river:nth-child(odd) .river_images {
+    float: left;
+    margin: 10px 30px 10px 0;
+}
+
+.rivers .river:nth-child(even) .river_images {
+    float: right;
+    margin: 10px 0 10px 30px;
+}
+
+.river_images {
+    position: relative;
+}
+
+.river_images_container {
+    display: flex;
+    overflow: hidden;
+    width: 450px;
+    position: relative;
+}
+
+:root {
+    --transition-river-images-arrow: background-color 0.6s;
+}
+
+.river_images_arrow {
+    z-index: 1;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color:  inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: var(--transition-river-images-arrow);
+    -moz-transition: var(--transition-river-images-arrow);
+    -o-transition: var(--transition-river-images-arrow);
+    transition: var(--transition-river-images-arrow);
+}
+
+.river_images_arrow:hover {
+    background-color:  rgb(0, 7, 49);
+}
+
+.river_images_arrow img {
+    width: 18px;
+    height: 18px;
+}
+
+.arrow_left {
+    left: 5px;
+}
+
+.arrow_right {
+    right: 5px;
+}
+
+.arrow_left img {
+    position: relative;
+    right: 2px;
+}
+
+.arrow_right img {
+    position: relative;
+    left: 1px;
+}
+
+.river_images_container > img {
+    width: 450px;
+    max-height: 450px;
+}
+
+.river_text{
+    color: rgba(198, 223, 255, 0.5);
+}
+
+:root {
+    --pop_up_window-transition: top 1s ease-out, opacity 1s ease-out;
+}
+
+.pop_up_element {
+    position: relative;
+    top: 150px;
+    opacity: 0;
+    -webkit-transition: var(--pop_up_window-transition);
+    -moz-transition: var(--pop_up_window-transition);
+    -o-transition: var(--pop_up_window-transition);
+    transition: var(--pop_up_window-transition);
+}
+
+.pop_up_element.emerge {
+    top: 0;
+    opacity: 1;
+}
+
+.bubble {
+    position: fixed;
+    transition: top 2s ease-in;
+}
+
+.bubble.bubble_up {
+    top: -50px;
+}
+
+@media screen and (max-width: 1100px) {
+    .wrap {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrap {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --margin-wrap: 15px;
+    }
+
+    .wrap {
+        width: calc(100% - 2 * var(--margin-wrap));
+        margin: 0 var(--margin-wrap) 0 var(--margin-wrap);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .river_images_container, .river_images_container > img {
+        max-width: 350px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .river_images_container, .river_images_container > img {
+        max-width: 490px;
+        width: 100%;
+    }
+
+    .rivers .river:nth-child(odd) .river_images {
+        margin-right: 0;
+    }
+    
+    .rivers .river:nth-child(even) .river_images {
+        margin-left: 0;
+    }
+}

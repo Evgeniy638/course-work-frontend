@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реки Северной Америки</title>
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="mobile_icon_menu">
+            <button class="mobile_icon_menu_button">
+                <span class="mobile_icon_menu_line top_line"></span>
+                <span class="mobile_icon_menu_line middle_line"></span>
+                <span class="mobile_icon_menu_line bottom_line"></span>
+            </button>
+        </div>
+        <ul class="header_menu">
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./eurasia.html">Реки Евразии</a></li>
+            <li><a class="active_link" href="#">Реки Северной Америки</a></li>
+            <li><a href="./southAmerica.html">Реки Южной Америки</a></li>
+            <li><a href="./africa.html">Реки Африки</a></li>
+            <li><a href="./australia.html">Реки Австралии</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="wrap_title">
+            <h1>Реки Северной Америки</h1>
+        </div>
+        
+        <canvas id="river_canvas"></canvas>
+
+        <div class="wrap rivers">
+            <div class="river pop_up_element">
+                <div class="river_title">
+                    <h2>Ниагара</h2>
+                </div>
+                <div class="river_images">
+                    <button class="river_images_arrow arrow_left"><img src="./img/arrow-left.svg" alt="стрелка влево"></button>
+                    <button class="river_images_arrow arrow_right"><img src="./img/arrow-right.svg" alt="стрелка вправо"></button>
+
+                    <div class="river_images_container">
+                        <img src="./img/rivers of north america/n.jpg" alt="Ниагара">
+                    </div>
+                </div>
+                <div class="river_text">
+                    <p>
+                        Ниага́ра (англ. Niagara River) — река в Северной Америке, соединяющая между собой озёра Эри и Онтарио и отделяющая штат Нью-Йорк (США) от канадской провинции Онтарио. Длина около 56 км, площадь бассейна 665 тысяч км².
+                    </p>
+                    <p>
+                        Средний расход воды — около 5,7 тыс. м³/сек, колебания расхода — от 4,1 тыс. м³/сек до 6,5 тыс. м³/сек.
+                    </p>
+                    <p>
+                        Река вытекает из озера Эри в районе между Буффало и Форт-Эри, течёт преимущественно на север. В верхнем течении делится на два рукава, образуя острова Гранд-Айленд (на территории США) и Н'ви-Айленд (на территории Канады). В среднем течении находятся Ниагарский водопад и пороги, в обход которых сооружён канал Вэлленд. По имеющимся данным, за последние 12 тыс. лет зона водопада и порогов переместилась вверх по течению Ниагары на 11 км, однако в последнее время этот процесс замедлился: отвод воды для нужд электростанций уменьшил разрушительный эффект. Река впадает в озеро Онтарио в районе канадского города Ниагара-он-те-Лейк.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./scripts/river.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/storeNorthAmerica.js"></script>
+    <script src="./scripts/bubbles.js"></script>
+</body>
+</html>
