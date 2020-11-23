@@ -27,6 +27,7 @@ header {
 
 .mobile_icon_menu {
     display: none;
+    height: 40px;
     height: var(--height-header);
 }
 
@@ -51,8 +52,8 @@ header {
     width: 100%;
     position: absolute;
     display: block;
-    transition: transform var(--time-transition-menu-line) cubic-bezier(0.19, 1, 0.22, 1),
-        opacity var(--time-transition-menu-line) cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1),
+        opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 :root {
@@ -60,6 +61,7 @@ header {
 }
 
 .top_line {
+    transform: translateY(calc(-1 * 8px - 100%));
     transform: translateY(calc(-1 * var(--margin-menu-line) - 100%));
 }
 
@@ -68,7 +70,8 @@ header {
 }
 
 .bottom_line {
-    transform: translateY(calc(var(--margin-menu-line)));
+    transform: translateY(8px);
+    transform: translateY(var(--margin-menu-line));
 }
 
 .header_menu {
@@ -78,6 +81,7 @@ header {
     max-width: 900px;
     margin: 0 0 0 auto;
     padding: 0 20px;
+    height: 40px;
     height: var(--height-header);
 }
 
@@ -114,6 +118,7 @@ header {
 }
 
 .wrap_title {
+    height: 51vh;
     height: calc(var(--height-linear-gradient) * var(--percent-water) / 100);
     padding-top: 20px;
     display: flex;

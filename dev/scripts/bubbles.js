@@ -43,13 +43,13 @@ const createAndAddedBubbles = () => {
 
         bubble.style.transition = `top ${time}s linear`;
 
-        document.documentElement.appendChild(bubble);
+        document.querySelector('body').appendChild(bubble);
 
         setTimeout(() => {
             bubble.style.top = "-50px";
 
             setTimeout(() => {
-                bubble.remove();
+                bubble.outerHTML = '';
             }, time * 1000 + 100);
         }, 100);
     }

@@ -1,12 +1,56 @@
 const header = document.querySelector("header");
 
+(function () {
+    if (!Element.prototype.scrollBy) {
+        Element.prototype.scrollBy = function({top, left}) {
+            this.scrollLeft += left;
+            this.scrollTop += top;
+        }
+    }
+
+}());
+
+(function () {
+
+    // проверяем поддержку
+    if (!Element.prototype.matches) {
+
+        // определяем свойство
+        Element.prototype.matches = Element.prototype.matchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector;
+
+    }
+
+})();
+
+(function () {
+
+    // проверяем поддержку
+    if (!Element.prototype.closest) {
+
+        // реализуем
+        Element.prototype.closest = function (css) {
+            var node = this;
+
+            while (node) {
+                if (node.matches(css)) return node;
+                else node = node.parentElement;
+            }
+            return null;
+        };
+    }
+
+})();
+
 //настраиваем кнопки для картинок реки
 const setUpRiverImages = riverImages => {
     const riverImagesContainer = riverImages.querySelector(".river_images_container");
 
     const marginBetweenImages = 10;
 
-    for(let i = 1; i < riverImagesContainer.children.length; i++){
+    for (let i = 1; i < riverImagesContainer.children.length; i++) {
         riverImagesContainer.children[i].style.marginLeft = marginBetweenImages + "px";
     }
 
@@ -36,7 +80,7 @@ const setUpRiverImages = riverImages => {
 
         riverImagesContainer.scrollBy({
             top: 0,
-            left: isRightArrow ?space : -1 * space,
+            left: isRightArrow ? space : -1 * space,
             behavior: 'smooth'
         });
 
@@ -70,7 +114,7 @@ const setUpRiverImages = riverImages => {
 }
 
 //задаём событие на кнопки картинок для прокрутки
-document.querySelectorAll(".river_images").forEach(setUpRiverImages);
+Array.prototype.forEach.call(document.querySelectorAll(".river_images"), setUpRiverImages);
 
 //задаём событие на открытие меню
 document.querySelector(".mobile_icon_menu_button").addEventListener("click", () => {
@@ -89,7 +133,9 @@ const closeMenuIfClickWithout = (eventElement) => {
 const emergeElements = () => {
     const elements = document.querySelectorAll(".pop_up_element:not(.emerge)");
 
-    for (const elem of elements) {
+    for (let i = 0; i < elements.length; i++) {
+        const elem = elements[i];
+
         if (elem.getBoundingClientRect().top > document.documentElement.clientHeight) return;
 
         elem.classList.add("emerge");
@@ -114,13 +160,13 @@ const createRiverTitle = (title) => {
 const createButtonForImages = (isRight) => {
     const button = document.createElement("button");
     button.classList.add("river_images_arrow");
-    button.classList.add(isRight ?"arrow_right" :"arrow_left");
+    button.classList.add(isRight ? "arrow_right" : "arrow_left");
 
     const img = document.createElement("img");
-    img.src = isRight ?"./img/arrow-right.svg" :"./img/arrow-left.svg";
-    img.alt = isRight ?"стрелка вправо" :"стрелка влево";
+    img.src = isRight ? "./img/arrow-right.svg" : "./img/arrow-left.svg";
+    img.alt = isRight ? "стрелка вправо" : "стрелка влево";
 
-    button.appendChild(img); 
+    button.appendChild(img);
 
     return button;
 }
@@ -191,7 +237,7 @@ const addNewRiver = () => {
 
     if (store.indexCurrentRiver > store.rivers.length - 1) return;
 
-    const {title, images, texts} = store.rivers[store.indexCurrentRiver];
+    const { title, images, texts } = store.rivers[store.indexCurrentRiver];
 
     store.indexCurrentRiver++;
 
@@ -200,7 +246,7 @@ const addNewRiver = () => {
     setUpRiverImages(newRiver);
 }
 
-window.addEventListener("click", (e)  => {
+window.addEventListener("click", (e) => {
     closeMenuIfClickWithout(e.target);
 });
 
