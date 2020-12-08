@@ -221,6 +221,13 @@ function addNewRiver() {
     document.documentElement.clientHeight);
 
   if (window.pageYOffset + document.documentElement.clientHeight + 300 < scrollHeight) return;
+
+  while (store.indexCurrentRiver < store.rivers.length &&
+    !store.rivers[store.indexCurrentRiver].title.toLowerCase().includes(store.filter.toLowerCase())) {
+
+    store.indexCurrentRiver++;
+  }
+  
   if (store.indexCurrentRiver > store.rivers.length - 1) return;
 
   var riverData = store.rivers[store.indexCurrentRiver],
