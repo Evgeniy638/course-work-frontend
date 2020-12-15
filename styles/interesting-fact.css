@@ -1,0 +1,23 @@
+.interesting-fact {
+    margin-top: 30px;
+    color: rgba(198, 223, 255, 0.5);
+}
+
+.interesting-fact__text-wrapper {
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    background-color: #174069;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 10px #17406988;
+}
+
+.interesting-fact__title {
+    text-align: center;
+}
+
+.interesting-fact__video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}

@@ -69,7 +69,7 @@ body {
 }
 
 .top_line {
-    transform: translateY(calc(-1 * 8px - 100%));
+    transform: translateY(-11px);
     transform: translateY(calc(-1 * var(--margin-menu-line) - 100%));
 }
 
@@ -146,8 +146,16 @@ h1 {
     font-size: 3.6em;
 }
 
+@media (max-width: 759px) {
+    h1 {
+        font-size: 2.6em;
+    }
+}
+
 h1.without-skew {
     transform: none;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 @media screen and (max-width: 1280px) {
