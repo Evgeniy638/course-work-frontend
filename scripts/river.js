@@ -32,5 +32,5 @@ function drawWater() {
   drawWave(ctx, -radius, canvasWidth, radius * 2.2, radius, "#19968a");
 }
 
-window.addEventListener("load", drawWater);
+drawWater();
 window.addEventListener("resize", drawWater);
