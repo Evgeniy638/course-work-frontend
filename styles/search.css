@@ -1,0 +1,110 @@
+.search {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 20px;
+    transition: all 0.8s ease-out;
+}
+
+.search__input {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.8s ease-out;
+}
+
+.search__input::-ms-clear {
+    display: none;
+}
+
+.search__button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 100%;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    outline: none;
+    top: 0;
+    right: -15px;
+    transition: all 0.8s ease-out;
+}
+
+.search__button_before,
+.search__button_after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transition: all 0.8s ease-out;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.search__button_before {
+    transform: rotate(45deg);
+    top: 32px;
+    right: -16px;
+}
+
+.search__button_after {
+    transform: rotate(-45deg);
+    top: 50%;
+    right: 5px;
+    opacity: 0;
+}
+
+.search__active {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.search__active .search__button {
+    width: 30px;
+    height: 30px;
+    right: 0;
+}
+
+.search__active .search__input{
+    width: 360px;
+    background-color: white;
+    color: rgb(53, 53, 53);
+    padding: 3px 35px 3px 5px;
+    border-radius: 6px;
+}
+
+.search__active .search__button_before {
+    top: 50%;
+    right: 5px;
+}
+
+.search__active .search__button_after {
+    opacity: 1;
+}
+
+.search__white_theme .search__input{
+    border-color: rgb(221, 221, 221);
+    color: rgb(221, 221, 221);
+}
+
+.search__white_theme.search__active .search__input {
+    background-color: rgb(0, 7, 49);
+}
+
+.search__white_theme .search__button_before,
+.search__white_theme .search__button_after {
+    background-color: rgb(221, 221, 221);
+}
+
+@media screen and (max-width: 400px) {
+    .search__active .search__input {
+        width: 250px;
+    }
+}

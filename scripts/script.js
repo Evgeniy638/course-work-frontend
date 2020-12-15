@@ -1,7 +1,5 @@
 "use strict";
 
-var header = document.querySelector("header");
-
 (function () {
   if (!Element.prototype.scrollBy) {
     Element.prototype.scrollBy = function (obj) {
@@ -12,38 +10,6 @@ var header = document.querySelector("header");
     }
   }
 })();
-
-(function () {
-  // проверяем поддержку
-  if (!Element.prototype.matches) {
-    // определяем свойство
-    Element.prototype.matches = Element.prototype.matchesSelector || 
-      Element.prototype.webkitMatchesSelector || 
-      Element.prototype.mozMatchesSelector || 
-      Element.prototype.msMatchesSelector;
-  }
-})();
-
-(function () {
-  // проверяем поддержку
-  if (!Element.prototype.closest) {
-    // реализуем
-    Element.prototype.closest = function (css) {
-      var node = this;
-
-      while (node) {
-        if (node.matches(css)) {
-          return node;
-        }
-        else {
-          node = node.parentElement;
-        }
-      }
-
-      return null;
-    }
-  }
-})(); 
 
 //настраиваем кнопки для картинок реки
 function setUpRiverImages(riverImages) {
@@ -113,18 +79,6 @@ function setUpRiverImages(riverImages) {
 
 //задаём событие на кнопки картинок для прокрутки
 Array.prototype.forEach.call(document.querySelectorAll(".river_images"), setUpRiverImages); 
-
-//задаём событие на открытие меню
-document.querySelector(".mobile_icon_menu_button").addEventListener("click", function () {
-  header.classList.toggle("open_menu");
-}); 
-
-//закрывает меню если клик (eventElement) произошёл вне меню
-var closeMenuIfClickWithout = function closeMenuIfClickWithout(eventElement) {
-  if (eventElement.closest("header") === null) {
-    header.classList.remove("open_menu");
-  }
-}
 
 //показывает всплывающее элементы, 
 //часть которых помещается в окне
@@ -242,9 +196,6 @@ function addNewRiver() {
   setUpRiverImages(newRiver);
 }
 
-window.addEventListener("click", function (e) {
-  closeMenuIfClickWithout(e.target);
-});
 window.addEventListener("scroll", function () {
   emergeElements();
   addNewRiver();
